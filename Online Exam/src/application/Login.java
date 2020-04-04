@@ -33,7 +33,7 @@ public class Login{
 	private void layoutXY() {
 		head.setLayoutX(380);
 		head.setLayoutY(210);
-		t.setLayoutX(396);
+		t.setLayoutX(386);
 		t.setLayoutY(300);
 		submit.setLayoutX(456.0); 
 		submit.setLayoutY(440.0);

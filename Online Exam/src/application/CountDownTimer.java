@@ -1,30 +1,34 @@
 package application;
-import java.util.Timer;
-import java.util.TimerTask;
-
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.scene.control.Label;
-import javafx.scene.text.Text;
-public class CountDownTimer {
-	
-	Label countDown = new Label();
-	int interval=600;
-	Timer timer= new Timer();
-    int delay = 1000;
-    int period = 1000;
-    
-	public int setInterval() {	    
-    	if (interval == 1)
-	        timer.cancel();
-    	return --interval;
-	}
-	
-	CountDownTimer(){
-		timer.scheduleAtFixedRate(new TimerTask() {
-		    public void run() {
-		    		Integer i=setInterval();
-			       	countDown.setText(i.toString());
-			        }
-			    }, delay, period);
-	}
+import javafx.util.Duration;
+public class CountDownTimer{
+	 	private static final Integer STARTTIME = 600;
+	    private Timeline timeline;
+	    Label timerLabel = new Label();
+	    private IntegerProperty timeSeconds = new SimpleIntegerProperty(STARTTIME);
+	    private String secs;
+	    private String mins;
+	    public void startTimer() {
+	    	  if (timeline != null) {
+                  timeline.stop();
+              }
+              timeSeconds.set(STARTTIME);
+              timeline = new Timeline();
+              timeline.getKeyFrames().add(
+                      new KeyFrame(Duration.seconds(STARTTIME+1),
+                      new KeyValue(timeSeconds, 0)));
+              timeline.playFromStart();
+	    }
+	    CountDownTimer(){
+	    	Integer a= (int) timeSeconds.intValue()/60;
+	    	Integer b= (int) timeSeconds.intValue()%60;
+	    	secs= b.toString();
+	    	mins=a.toString();
+	    	timerLabel.setText(mins+":"+secs);
+	    }
 }
-

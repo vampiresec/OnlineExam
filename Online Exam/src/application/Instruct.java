@@ -8,9 +8,11 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 
 public class Instruct  {
+	
 	Button strt = new Button("Start Exam");
-	AnchorPane root= new AnchorPane();
-	Label Head = new Label("TEST INSTRUCTIONS");
+	
+	private AnchorPane root= new AnchorPane();
+	private Label Head = new Label("TEST INSTRUCTIONS");
 	
 	Text Is = new Text("1. Please read and understand the Test instructions so that you will be able to easily navigate through the Test\r\n" + 
 			"2. Once you click on the 'Start exam ' button the actual test time will begin.\r\n" + 

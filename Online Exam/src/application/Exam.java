@@ -66,6 +66,7 @@ public class Exam {
 			opt3.setUserData(rs.getString("opt3"));
 			opt4.setUserData(rs.getString("opt4"));
 			prev.setDisable(true);
+			cd.startTimer();
 			group.selectedToggleProperty().addListener(new ChangeListener<Toggle>(){
 		        public void changed(ObservableValue<? extends Toggle> ov, Toggle old_toggle, Toggle new_toggle) {
 		        		
@@ -206,7 +207,7 @@ public class Exam {
 		    options.getChildren().addAll(opt1,opt2,opt3,opt4);
 		    options.setSpacing(10);
 		    hmenu.setSpacing(5);
-		    hmenu.getChildren().addAll(prev,nxt);
+		    hmenu.getChildren().addAll(prev,nxt,cd.timerLabel);
 		    root.getChildren().addAll(question,options,hmenu,scrollStatus,l1,l2,l3,l4);
 		    exam.getStylesheets().add("/application/Exam.css");
 		}
