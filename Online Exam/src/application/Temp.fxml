@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="709.0" prefWidth="1004.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button  mnemonicParsing="false" text="Button" />
+      <Label layoutX="367.0" layoutY="319.0" prefHeight="21.0" prefWidth="35.0" text="Label" />
+      <Label layoutX="367.0" layoutY="362.0" prefWidth="35.0" text="Label" />
+      <PasswordField layoutX="456.0" layoutY="357.0" />
+      <TextField layoutX="456.0" layoutY="314.0" />
+      <Hyperlink layoutX="570.0" layoutY="388.0" text="Hyperlink" />
+      <Label accessibleRole="DATE_PICKER" contentDisplay="CENTER" layoutX="471.0" layoutY="232.0" text="Label" />
+   </children>
+</AnchorPane>
