@@ -65,6 +65,7 @@ public class Exam {
 			opt2.setUserData(rs.getString("opt2"));
 			opt3.setUserData(rs.getString("opt3"));
 			opt4.setUserData(rs.getString("opt4"));
+			prev.setDisable(true);
 			group.selectedToggleProperty().addListener(new ChangeListener<Toggle>(){
 		        public void changed(ObservableValue<? extends Toggle> ov, Toggle old_toggle, Toggle new_toggle) {
 		        		
@@ -96,9 +97,12 @@ public class Exam {
 				opt3.setUserData(rs.getString("opt3"));
 				opt4.setUserData(rs.getString("opt4"));
 				count++;
+				prev.setDisable(false);
 				deselect();
 			}
 			else {
+				nxt.setDisable(true);
+				hmenu.getChildren().add(finish);
 				scrollStatus.setText("Last Question");
 			}
 		}
@@ -128,7 +132,7 @@ public class Exam {
 			}
 			else {
 				scrollStatus.setText("First Qustion");
-				prev.setStyle("-fx-disabled:true;");
+				prev.setDisable(true);
 			}
 		}
 		catch(Exception e) {System.out.print(e);}
@@ -202,7 +206,7 @@ public class Exam {
 		    options.getChildren().addAll(opt1,opt2,opt3,opt4);
 		    options.setSpacing(10);
 		    hmenu.setSpacing(5);
-		    hmenu.getChildren().addAll(prev,nxt,finish);
+		    hmenu.getChildren().addAll(prev,nxt);
 		    root.getChildren().addAll(question,options,hmenu,scrollStatus,l1,l2,l3,l4);
 		    exam.getStylesheets().add("/application/Exam.css");
 		}

@@ -46,7 +46,7 @@ public class MainController extends Application{
 								conn.close();
 							}
 							else {
-								l.t.setText("Login failed!");
+								l.t.setText("Either Username or Password is wrong!");
 								l.t.setFill(Color.DARKRED);
 							}
 						}

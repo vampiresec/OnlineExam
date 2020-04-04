@@ -6,7 +6,7 @@
 }
 #head{
 	-fx-text-fill:  rgb(10,10,255);
-	-fx-font:bold 20px "Times New Roman";
+	-fx-font:bold 30pt "Times New Roman";
 	-fx-effect:dropshadow(one-pass-box,GREEN,8,0.0,2,0);  
 }
 .label{
@@ -18,4 +18,10 @@
 	-fx-background-colour:rgb(255, 255, 255);
 	-fx-border-radius: 20px;
 	-fx-background-radius: 15px;
+}
+.rectangle{
+	-fx-arcradius:30px;
+}
+#lstaus{
+	-fx-font-size:14px;
 }
