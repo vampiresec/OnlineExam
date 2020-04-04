@@ -1,8 +1,8 @@
 .root{
-	-fx-background: rgb(255, 255, 0);
+	-fx-background: rgb(240, 240, 255);
 	-fx-base: rgb(255,255,255);
-	-fx-bakground-radius:75;
-	-fx-alignment:centre;
+	-fx-bakground-radius:75px;
+	
 	
 }
 .label{

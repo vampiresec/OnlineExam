@@ -200,12 +200,11 @@ public class Exam {
 		    opt3.setToggleGroup(group);  
 		    opt4.setToggleGroup(group);
 		    options.getChildren().addAll(opt1,opt2,opt3,opt4);
-		   
 		    options.setSpacing(10);
 		    hmenu.setSpacing(5);
-		    hmenu.setAlignment(Pos.CENTER);
-		    hmenu.getChildren().addAll(prev,nxt,finish,cd.countDown);
+		    hmenu.getChildren().addAll(prev,nxt,finish);
 		    root.getChildren().addAll(question,options,hmenu,scrollStatus,l1,l2,l3,l4);
+		    exam.getStylesheets().add("/application/Exam.css");
 		}
 		catch(Exception e) {
 			System.out.print(e);
